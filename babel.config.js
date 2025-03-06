@@ -20,6 +20,7 @@ module.exports = function(api) {
       isTestEnv && [
         '@babel/preset-env',
         {
+          loose: true,
           targets: {
             node: 'current'
           }
@@ -28,6 +29,7 @@ module.exports = function(api) {
       (isProductionEnv || isDevelopmentEnv) && [
         '@babel/preset-env',
         {
+          loose: true,
           forceAllTransforms: true,
           useBuiltIns: 'entry',
           corejs: 3,
