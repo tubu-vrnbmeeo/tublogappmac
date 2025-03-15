@@ -20,7 +20,6 @@ module.exports = function(api) {
       isTestEnv && [
         '@babel/preset-env',
         {
-          loose: true,
           targets: {
             node: 'current'
           }
@@ -29,7 +28,6 @@ module.exports = function(api) {
       (isProductionEnv || isDevelopmentEnv) && [
         '@babel/preset-env',
         {
-          loose: true,
           forceAllTransforms: true,
           useBuiltIns: 'entry',
           corejs: 3,
@@ -56,11 +54,21 @@ module.exports = function(api) {
         }
       ],
       [
+        '@babel/plugin-proposal-private-methods',
+        {
+          loose: true
+        }
+      ],
+      [
+        '@babel/plugin-proposal-private-property-in-object',
+        {
+          loose: true
+        }
+      ],
+      [
         '@babel/plugin-transform-runtime',
         {
-          helpers: false,
-          regenerator: true,
-          corejs: false
+          helpers: false
         }
       ],
       [
