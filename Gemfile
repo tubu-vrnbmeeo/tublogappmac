@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.7'
+ruby '3.3.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.0.6', '>= 6.0.6.1'
+gem 'rails', '~> 7.2.2', '>= 7.2.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -30,6 +30,8 @@ gem 'hamlit'
 gem 'net-http'
 gem 'aws-sdk-s3', require: false
 gem 'ffi', '< 1.17.0'
+gem 'psych', '~> 3.1'
+gem "sassc-rails"
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
