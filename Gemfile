@@ -7,7 +7,7 @@ ruby '3.3.2'
 gem 'rails', '~> 7.2.2', '>= 7.2.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 6.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -30,8 +30,11 @@ gem 'hamlit'
 gem 'net-http'
 gem 'aws-sdk-s3', require: false
 gem 'ffi', '< 1.17.0'
-gem 'psych', '~> 3.1'
 gem "sassc-rails"
+gem 'importmap-rails'
+gem 'mutex_m'
+gem 'turbo-rails'
+gem 'stimulus-rails'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
