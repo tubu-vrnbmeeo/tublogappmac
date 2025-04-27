@@ -30,7 +30,7 @@ gem 'hamlit'
 gem 'net-http'
 gem 'aws-sdk-s3', require: false
 gem 'ffi', '< 1.17.0'
-gem "sassc-rails"
+gem 'sassc-rails'
 gem 'importmap-rails'
 gem 'mutex_m'
 gem 'turbo-rails'
