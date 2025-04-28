@@ -8,12 +8,13 @@ babelLoader.include = [
 
 const customConfig = {
   resolve: {
-    fallback: {
-      dgram: false,
-      fs: false,
-      net: false,
-      tls: false,
-      child_process: false
+    // Use alias with empty objects to provide "empty modules"
+    alias: {
+      dgram: require.resolve("./polyfills/empty-module.js"),
+      fs: require.resolve("./polyfills/empty-module.js"),
+      net: require.resolve("./polyfills/empty-module.js"),
+      tls: require.resolve("./polyfills/empty-module.js"),
+      child_process: require.resolve("./polyfills/empty-module.js")
     }
   }
 };

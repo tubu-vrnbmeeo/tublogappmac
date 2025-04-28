@@ -25,3 +25,12 @@ require("@rails/activestorage").start()
 
 require("trix")
 require("@rails/actiontext")
+
+import $ from 'jquery'
+
+document.addEventListener('DOMContentLoaded', () => {
+  debugger
+  $('.article_title').on('click', () => {
+    window.alert('clicked')
+  })
+})
