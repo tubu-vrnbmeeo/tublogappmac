@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       redirect_to article_path(article), notice: 'コメントを追加'
     else
       flash.now[:error] = '更新できませんでした'
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

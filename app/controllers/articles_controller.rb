@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
       redirect_to article_path(@article), notice: '保存できたよ'
     else
       flash.now[:error] = '保存に失敗しました'
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -34,14 +34,14 @@ class ArticlesController < ApplicationController
       redirect_to article_path(@article), notice: '保存できたよ'
     else
       flash.now[:error] = '更新できませんでした'
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     article = current_user.articles.find(params[:id])
     article.destroy!
-    redirect_to root_path, notice: '削除に成功しました'
+    redirect_to root_path, status: :see_other, notice: '削除に成功しました'
   end
 
   private

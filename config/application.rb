@@ -11,8 +11,7 @@ module BlogAppMac
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    if Rails.env.development? || Rails.env.test?
-      Bundler.require(*Rails.groups)
+    if ['development', 'test'].include? ENV['RAILS_ENV']
       Dotenv::Railtie.load
     end
 
@@ -21,5 +20,6 @@ module BlogAppMac
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.i18n.default_locale = :ja
+    config.active_storage.variant_processor = :mini_magick
   end
 end
