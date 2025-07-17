@@ -35,6 +35,7 @@ gem 'importmap-rails'
 gem 'mutex_m'
 gem 'turbo-rails'
 gem 'stimulus-rails'
+gem 'active_model_serializers'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
